@@ -36,6 +36,18 @@ This MkDocs site provides:
 # Install Python 3.8+ and pip
 python --version
 pip --version
+docker --version
+docker-compose --version
+make --version
 
-# Install MkDocs and Material theme
-pip install mkdocs mkdocs-material
+## ✅ Quick commands summary
+
+```bash
+# Most common commands
+make help      # Show all commands
+make build     # Build images
+make up        # Start server
+make open      # Open in browser
+make lint      # Check markdown
+make logs      # View logs
+make down      # Stop server
