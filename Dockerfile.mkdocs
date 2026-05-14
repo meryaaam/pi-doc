@@ -1,0 +1,17 @@
+FROM squidfunk/mkdocs-material:latest
+
+# Install all required Python packages
+RUN pip install --no-cache-dir \
+    mkdocs-drawio \
+    mkdocs-minify-plugin \
+    mkdocs-git-revision-date-localized-plugin \
+    mkdocs-awesome-pages-plugin
+
+# Set working directory
+WORKDIR /docs
+
+# Expose MkDocs port
+EXPOSE 8001
+
+# Default command
+CMD [ "serve", "--dev-addr=0.0.0.0:8001"]

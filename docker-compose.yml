@@ -1,0 +1,33 @@
+services:
+  # Main MkDocs documentation server
+  mkdocs:
+    build:
+      context: .
+      dockerfile: Dockerfile.mkdocs
+    ports:
+      - "8001:8001"
+    volumes:
+      - ./:/docs
+    environment:
+      - PYTHONUNBUFFERED=1
+    restart: unless-stopped
+    container_name: pi-cloud-docs
+
+  # markdownlint for linting markdown files
+  markdownlint:
+    build:
+      context: .
+      dockerfile: Dockerfile.markdownlint
+    volumes:
+      - ./:/workspace
+    working_dir: /workspace
+    command: docs/**/*.md
+    container_name: pi-cloud-linter
+
+  # Helper: Create new documentation
+  create-doc:
+    image: alpine:latest
+    volumes:
+      - ./:/workspace
+    working_dir: /workspace
+    command: sh -c "echo '---\n# New Page\n\nWrite your content here' > docs/\$(echo \$${1:-new-page}).md"

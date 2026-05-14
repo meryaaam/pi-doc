@@ -1,0 +1,21 @@
+# Git
+.git/
+#.gitignore
+
+# Documentation output
+site/
+__pycache__/
+*.pyc
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
