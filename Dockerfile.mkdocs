@@ -1,11 +1,14 @@
-FROM squidfunk/mkdocs-material:latest
+FROM squidfunk/mkdocs-material:9.5.0
 
 # Install all required Python packages
 RUN pip install --no-cache-dir \
     mkdocs-drawio \
     mkdocs-minify-plugin \
     mkdocs-git-revision-date-localized-plugin \
-    mkdocs-awesome-pages-plugin
+    mkdocs-awesome-pages-plugin \
+    mkdocs-material \
+    mkdocs-mermaid2-plugin \
+    mkdocs-table-reader-plugin
 
 # Set working directory
 WORKDIR /docs

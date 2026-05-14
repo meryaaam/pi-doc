@@ -1,23 +1,11 @@
-site_name: PI-Cloud 25-26 Documentation
-site_description: Private Cloud Infrastructure with AI Integration for Sustainable Development
-site_author: PI-Cloud Team
-copyright: © 2025 PI-Cloud Project
+site_name: PI Cloud Infrastructure Documentation
+site_description: Complete design documentation for ESPRIT PI Cloud Project
+site_author: PI Cloud Team
+copyright: © 2026 ESPRIT PI Cloud Team
 
 theme:
   name: material
-  palette:
-    - scheme: default
-      primary: indigo
-      accent: cyan
-      toggle:
-        icon: material/brightness-7
-        name: Switch to dark mode
-    - scheme: slate
-      primary: indigo
-      accent: cyan
-      toggle:
-        icon: material/brightness-4
-        name: Switch to light mode
+  language: en
   features:
     - navigation.tabs
     - navigation.sections
@@ -25,20 +13,92 @@ theme:
     - navigation.top
     - search.highlight
     - search.share
+    - toc.follow
     - content.code.copy
-
-plugins:
-  - search
-  - drawio
-  - minify
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: deep purple
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: deep purple
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
 
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
   - pymdownx.inlinehilite
   - pymdownx.snippets
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - tables
   - admonition
   - pymdownx.details
-  - tables
-  - footnotes
+  - attr_list
+  - md_in_html
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+plugins:
+  - search
+  - mermaid2
+
+nav:
+  - Home: index.md
+  - Global Overview:
+      - Project Vision: 01-global-overview/project-vision.md
+      - SDG Alignment: 01-global-overview/sdg-alignment.md
+      - Team Structure: 01-global-overview/team-structure.md
+  - Architecture Design:
+      - High Level Architecture: 02-architecture/high-level-architecture.md
+      - Component Interaction: 02-architecture/component-interaction.md
+      - Data Flow: 02-architecture/data-flow.md
+  - Network Design:
+      - ZeroTier Network: 03-network/zerotier-network.md
+      - IP Assignment: 03-network/ip-assignment.md
+      - Connectivity Matrix: 03-network/connectivity-matrix.md
+  - Hardware & Resources:
+      - Rack Layout: 04-hardware/rack-layout.md
+      - Node Specifications: 04-hardware/node-specifications.md
+      - Resource Allocation: 04-hardware/resource-allocation.md
+  - Technology Stack:
+      - OpenStack Design: 05-technology-stack/openstack-design.md
+      - Kubernetes Design: 05-technology-stack/kubernetes-design.md
+      - Monitoring Stack: 05-technology-stack/monitoring-stack.md
+      - Automation Stack: 05-technology-stack/automation-stack.md
+  - Deployment Guide:
+      - "Phase 1: VM Setup":         "06-deployment/phase1-vm-setup.md"
+      - "Phase 2: ZeroTier":         "06-deployment/phase2-zerotier.md"
+      - "Phase 3: Prerequisites":    "06-deployment/phase3-prerequisites.md"
+      - "Phase 4: OpenStack":        "06-deployment/phase4-openstack-deployment.md"
+      - "Phase 5: Verification":     "06-deployment/phase5-verification.md "
+      - "Phase 6: K8s & Monitoring": "06-deployment/phase6-kubernetes-monitoring.md"
+  - Security:
+      - Credentials Management: 07-security/credentials-management.md
+      - Network Security: 07-security/network-security.md
+      - Compliance: 07-security/compliance.md
+  - Monitoring & Observability:
+      - Prometheus Config: 08-monitoring/prometheus-config.md
+      - Grafana Dashboards: 08-monitoring/grafana-dashboards.md
+      - Alerting Rules: 08-monitoring/alerting-rules.md
+  - Backup & Recovery:
+      - Backup Strategy: 09-backup-recovery/backup-strategy.md
+      - Recovery Procedures: 09-backup-recovery/recovery-procedures.md
+      - Disaster Recovery: 09-backup-recovery/disaster-recovery.md
+  - Team Responsibilities:
+      - Meryam (Controller): 10-team-responsibilities/meryam-controller.md
+      - Chaima (Compute1): 10-team-responsibilities/chaima-compute1.md
+      - Siwar (Compute2): 10-team-responsibilities/siwar-compute2.md
+      - Aymen (Compute3): 10-team-responsibilities/aymen-compute3.md
+      - Aziz (Storage/Auto): 10-team-responsibilities/aziz-storage-automation.md
