@@ -148,12 +148,12 @@ Each node must be able to:
 
 ## Verification Checklist
 
-- [ ] ZeroTier installed successfully
-- [ ] Joined correct network
-- [ ] Correct static IP assigned
-- [ ] Controller reachable
-- [ ] All peers visible
-- [ ] Stable latency between nodes
+- [✔️] ZeroTier installed successfully
+- [✔️] Joined correct network
+- [✔️] Correct static IP assigned
+- [✔️] Controller reachable
+- [✔️] All peers visible
+- [✔️] Stable latency between nodes
 
 ---
 
