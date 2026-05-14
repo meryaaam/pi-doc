@@ -125,6 +125,7 @@ flowchart LR
     P4 --> P5[Phase 5\nVerification]
     P5 --> P6[Phase 6\nK8s & Monitoring]
 
+## File 3: `docs/02-architecture/component-interaction.md`
     style P1 fill:#EEEDFE,stroke:#AFA9EC,color:#3C3489
     style P2 fill:#E1F5EE,stroke:#5DCAA5,color:#085041
     style P3 fill:#E6F1FB,stroke:#85B7EB,color:#0C447C
@@ -146,6 +147,27 @@ flowchart LR
 | **Aziz** | Storage / Automation | Ceph, Ansible, CI/CD pipelines | `10.147.20.5` |
 
 ---
+
+## Contact## Contact & Support
+
+| & Support Role |
+
+| Role | Name | Name | Responsibility |
+| Responsibility------| |
+|------|----------------|
+------|------|----------------|
+| **| **Project LeadProject Lead** |** | Meryam | Controller node Meryam | Controller node, overall coordination |
+, overall coordination |
+| **| **Compute LeadCompute Lead** | Chaim** | Chaima |a | Compute1 Compute1, K, KVM optimization |
+|VM optimization **Compute |
+| **Compute Lead** | Si Lead** | Siwar |war | Compute2 Compute2, networking |
+|, networking |
+| **Compute **Compute Lead** Lead** | A | Aymen | Compute3, AIymen | Compute3, AI integration integration |
+| |
+| **Automation Lead **Autom** |ation Lead Aziz** | Aziz | Storage | Storage, Ansible deployment |
+
+---
+
 
 ## SDG Alignment
 
