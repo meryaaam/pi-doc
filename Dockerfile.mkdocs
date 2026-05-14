@@ -5,7 +5,10 @@ RUN pip install --no-cache-dir \
     mkdocs-drawio \
     mkdocs-minify-plugin \
     mkdocs-git-revision-date-localized-plugin \
-    mkdocs-awesome-pages-plugin
+    mkdocs-awesome-pages-plugin \
+    mkdocs-material \
+    mkdocs-mermaid2-plugin \
+    mkdocs-table-reader-plugin
 
 # Set working directory
 WORKDIR /docs
