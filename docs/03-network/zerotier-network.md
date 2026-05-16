@@ -19,15 +19,15 @@ The overlay network provides:
 ```mermaid
 graph TD
 
-    ZT[ZeroTier Virtual Network<br/>10.113.163.0/24]
+    ZT[ZeroTier Virtual Network<br/>10.37.173.0/24]
 
-    CTRL[Controller<br/>10.113.163.27]
+    CTRL[Controller<br/>10.37.173.27]
 
-    C1[Compute1<br/>10.113.163.28]
-    C2[Compute2<br/>10.113.163.232]
-    C3[Compute3<br/>10.113.163.94]
+    C1[Compute1<br/>10.37.173.27]
+    C2[Compute2<br/>10.37.173.232]
+    C3[Compute3<br/>10.37.173.208]
 
-    ST[Storage & Automation<br/>10.113.163.1]
+    ST[Storage & Automation<br/>10.37.173.1]
 
     ZT --> CTRL
 
@@ -50,8 +50,8 @@ graph TD
 |---|---|
 | Network Technology | ZeroTier SDN |
 | Network Type | Overlay Virtual Network |
-| Address Space | `10.113.163.0/24` |
-| Network ID | `633e31d8a20db0c2` |
+| Address Space | `10.37.173.0/24` |
+| Network ID | `f3797ba7a87254bb` |
 | Connectivity | Peer-to-peer encrypted |
 | Primary Usage | OpenStack & Kubernetes communication |
 
